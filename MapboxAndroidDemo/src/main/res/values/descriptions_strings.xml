@@ -7,6 +7,7 @@
     <string name="activity_basic_simple_mapview_description">Show a map in your app using the Mapbox Maps SDK.</string>
     <string name="activity_basic_support_map_frag_description">Include a map fragment within your app using Android support library.</string>
     <string name="activity_basic_mapbox_options_description">Add a mapview in a dynamically created layout.</string>
+    <string name="activity_basic_mapbox_kotlin_description">Display a basic map with Kotlin code.</string>
     <string name="activity_styles_mapbox_studio_description">Use a custom Mapbox-hosted style.</string>
     <string name="activity_style_raster_description">Use legacy raster tiles in your app.</string>
     <string name="activity_styles_default_description">Use a variety of professionally designed styles with the Mapbox Maps SDK.</string>
@@ -35,6 +36,7 @@
     <string name="activity_extrusions_rotate_extrusions_description">Rotate and tilt device to change camera and see all around 3D buildings.</string>
     <string name="activity_extrusions_indoor_3d_description">Create a 3D indoor map with the fill-extrude-height paint property.</string>
     <string name="activity_dds_style_circle_categorically_description">Using a categorical circle-color property function for a visualization.</string>
+    <string name="activity_dds_kotlin_style_circle_categorically_description">Kotlin example for using a categorical circle-color property function for a visualization.</string>
     <string name="activity_dds_heatmap_description">Add and customize a heatmap to visualize data.</string>
     <string name="activity_dds_multiple_heatmap_styling_description">Gain minute control over heatmap coloring.</string>
     <string name="activity_dds_choropleth_zoom_change_description">Style a choropleth map with data-driven styling, local JSON data, and vector tile geometries.</string>

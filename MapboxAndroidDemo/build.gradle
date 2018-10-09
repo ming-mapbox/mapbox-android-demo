@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.google.firebase.firebase-perf'
 apply plugin: 'com.github.triplet.play'
 apply from: "$project.rootDir/gradle/script-git-version.gradle"
@@ -25,6 +27,8 @@ android {
         versionName gitVersionName
 
         vectorDrawables.useSupportLibrary = true
+
+        multiDexEnabled true
 
         buildConfigField "int", "MIN_SDK_VERSION", "$minSdkVersion.apiLevel"
 
@@ -127,6 +131,8 @@ dependencies {
     implementation dependenciesList.materialStyleDialog
     implementation dependenciesList.cuttaGifView
     implementation dependenciesList.materialDialogsCommons
+    implementation dependenciesList.kotlin
+    implementation dependenciesList.multiDex
 
     // Square crew
     implementation dependenciesList.timber
@@ -149,3 +155,4 @@ dependencies {
 }
 
 apply from: "${rootDir}/gradle/checkstyle.gradle"
+apply plugin: 'kotlin-android-extensions'

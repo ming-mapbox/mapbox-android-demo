@@ -1,7 +1,5 @@
 package com.mapbox.mapboxandroiddemo.examples.dds;
 
-// #-code-snippet: add-rain-fall-style-activity full-java
-
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -28,9 +26,9 @@ import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.fillColor;
  * Style a rainfall map by get data from url
  */
 public class AddRainFallStyleActivity extends AppCompatActivity implements OnMapReadyCallback {
-  public static final String ID_SOURCE = "moji-source";
-  public static final String ID_LAYER = "moji-layer";
-  public static final String SOURCE_URL = "mapbox://shenhongissky.6vm8ssjm";
+  public static final String ID_SOURCE = "source-id";
+  public static final String ID_LAYER = "layer-id";
+  public static final String SOURCE_URL = "mapbox://examples.dwtmhwpu";
   private MapView mapView;
   private Handler handler;
   private FillLayer layer;
@@ -106,7 +104,7 @@ public class AddRainFallStyleActivity extends AppCompatActivity implements OnMap
     do {
       handler.postDelayed(refreshGeoJsonRunnable, 1000);
     }
-    while (index == 39);
+    while (index == 37);
   }
 
   private class RefreshGeoJsonRunnable implements Runnable {
@@ -114,7 +112,7 @@ public class AddRainFallStyleActivity extends AppCompatActivity implements OnMap
     public void run() {
       layer.setFilter(eq((Expression.get("idx")), literal(index)));
       index++;
-      if (index == 40) {
+      if (index == 37) {
         index = 0;
       }
       handler.postDelayed(this, 1000);
@@ -130,7 +128,7 @@ public class AddRainFallStyleActivity extends AppCompatActivity implements OnMap
     layer = mapboxMap.getLayerAs(ID_LAYER);
     if (layer == null) {
       layer = new FillLayer(ID_LAYER, ID_SOURCE);
-      layer.withSourceLayer("whole");
+      layer.withSourceLayer("201806261518");
       layer.setFilter(eq((get("idx")), literal(0)));
       layer.setProperties(PropertyFactory.visibility(VISIBLE),
         fillColor(interpolate(Expression.exponential(1f),
@@ -157,4 +155,3 @@ public class AddRainFallStyleActivity extends AppCompatActivity implements OnMap
     }
   }
 }
-// #-end-code-snippet: add-rain-fall-style-activity full-java

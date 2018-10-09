@@ -43,6 +43,13 @@
                 android:value="com.mapbox.mapboxandroiddemo.MainActivity" />
         </activity>
         <activity
+            android:name=".examples.basics.SimpleMapViewActivityKotlin"
+            android:label="@string/activity_basic_mapbox_kotlin_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mapbox.mapboxandroiddemo.MainActivity" />
+        </activity>
+        <activity
             android:name=".examples.styles.MapboxStudioStyleActivity"
             android:label="@string/activity_styles_mapbox_studio_title">
             <meta-data
@@ -136,6 +143,13 @@
         <activity
             android:name=".examples.plugins.PlaceSelectionPluginActivity"
             android:label="@string/activity_plugins_place_picker_plugin_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mapbox.mapboxandroiddemo.MainActivity" />
+        </activity>
+        <activity
+            android:name=".examples.plugins.KotlinLocationPluginActivity"
+            android:label="@string/activity_plugins_location_plugin_title">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mapbox.mapboxandroiddemo.MainActivity" />
@@ -486,6 +500,13 @@
         <activity
             android:name=".examples.dds.StyleCirclesCategoricallyActivity"
             android:label="@string/activity_dds_style_circle_categorically_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mapbox.mapboxandroiddemo.MainActivity" />
+        </activity>
+        <activity
+            android:name=".examples.dds.KotlinStyleCirclesCategoricallyActivity"
+            android:label="@string/activity_dds_style_kotlin_circle_categorically_title">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mapbox.mapboxandroiddemo.MainActivity" />
